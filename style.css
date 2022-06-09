@@ -1,6 +1,4 @@
-* {
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 
 * {
     padding: 0;
@@ -16,12 +14,40 @@ header {
     background-color: black;
     color: white;
     display: flex;
-    padding: 20px;
+    padding: 30px;
+}
+
+/* Abstand zw. "media", "amateur" & play icon */
+.header-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* "media" */
+.header-title span:first-child {
+    color: orangered;
+    cursor: pointer;
+}
+
+.header-title span:last-child {
+    background-color: orangered; /* background of the play icon */
+    color: white; /* the play icon */
+    padding: 5px 10px;
+    border-radius: 25%;
+    max-width: max-content;
+    margin-right: 50px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .search-bar {
     flex-grow: 1;
     display: flex;
+    margin-left: 50px;
+}
+.search-bar {
+    flex-grow: 1;
 }
 
 .search-bar-input {
@@ -30,3 +56,102 @@ header {
     padding-left: 8px;
 }
 
+.search-bar-icon {
+    background: orangered;
+    padding: 12px 12px;
+    display: flex;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+/* Warenkorb */
+.header-basket {
+    display: flex;
+    align-items: end;
+    font-size: 22px;
+    font-weight: 500;
+    color: orangered;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    gap: 20px;
+}
+
+.categories-title {
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.categories-items {
+    display: flex;
+    gap: 20px;
+}
+
+.categories-items button {
+    font-size: 20px;
+    padding: 8px 19px;  /* Größe der buttons */
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+    border-radius: 15px;
+}
+
+.categories-items button:hover {
+    background: orangered;
+    color: black;
+    
+}
+
+.categories-items button.active {
+    background: black;
+    color: orangered;
+    border-radius: 15px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.product-item {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.product-item:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.product-item img {
+    width: 300px;
+}
+
+.product-name {
+    font-size: 23px;
+    font-size: bold;
+}
+
+.product-description {
+    color: rgb(24, 21, 21);
+    font-size: 15px;
+    line-height: 22px;
+    width: 90%;
+}
